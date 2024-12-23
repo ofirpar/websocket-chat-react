@@ -1,0 +1,26 @@
+.messageContainer {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: green;
+    align-self: flex-start;
+    align-items: flex-start;
+    color: white;
+    width: max-content;
+    padding: 5px 15px;
+    margin: 0px 20px 0px 0px;
+    text-align: left;
+    max-width: fit-content;
+    &.self {
+        background-color: #83C101;
+        align-self: flex-end;    
+        margin: 0px 0px 0px 20px;
+    }
+}
+
+
+.messageSender {
+    font-size: 10px;
+    font-weight: 600;
+    color: black;
+}
