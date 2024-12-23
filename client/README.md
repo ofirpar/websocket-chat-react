@@ -1,50 +1,82 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# WebSocket Chat Application with React
 
-Currently, two official plugins are available:
+This is a WebSocket-based chat application built using React (for the client) and Node.js (for the server).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Real-time messaging with WebSocket
+- Basic chat interface built with React
+- Bidirectional communication between client and server
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Project Structure
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+/websocket-chat-react
+|-- /client           # React client application
+|-- /server           # Node.js server application
+|-- .gitignore        # Git ignore file
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Prerequisites
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/)
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Installation
+
+### Client
+
+1. Navigate to the client directory:
+
+   ```bash
+   cd client
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the client application:
+
+   ```bash
+   npm start
+   ```
+
+### Server
+
+1. Navigate to the server directory:
+
+   ```bash
+   cd server
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the server:
+
+   ```bash
+   npm start
+   ```
+
+The client will connect to the server via WebSocket at the specified address (typically `localhost:3000` for development).
+
+## Usage
+
+- Open the app in multiple tabs to simulate different users.
+- Enter a username and begin chatting.
+- Messages will be exchanged in real-time between all connected users.
+
+## Contributing
+
+Feel free to fork the repo, create a branch, and submit a pull request for any improvements!
+
+## License
+
+This project is licensed under the MIT License.
